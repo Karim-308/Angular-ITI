@@ -1,8 +1,13 @@
 <div class="container">
-    <h2>Users</h2>                                   
+    <h2 class="title">Users</h2>                             
+    
+    <div class="search-container">
+      <input type="text" placeholder="Search by email" [(ngModel)]="searchEmail" (keyup)="search()" />
+      <button class="btn-search" (click)="search()">Search</button>
+    </div>
   
     <div class="cards">
-      @for (user of users; track user.id) {
+      @for (user of filteredUsers; track user.id) {
         <div class="card">
             <img [src]="'https://i.pravatar.cc/150?img=' + user.id" [alt]="user.username"  
             class="avatar" />

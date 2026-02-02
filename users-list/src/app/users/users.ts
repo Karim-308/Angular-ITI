@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
-  imports: [NgClass],
+  imports: [NgClass, FormsModule],
   templateUrl: './users.html',
   styleUrl: './users.css',
 })
 export class Users {
+
+
   users = [
     {
       id: 1,
@@ -45,4 +48,16 @@ export class Users {
   
     }
   ];
+
+  searchEmail = '';
+  filteredUsers = this.users;
+
+  search() {
+    if (this.searchEmail) {
+      this.filteredUsers = this.users.filter(user => 
+      user && user.email.toLowerCase().includes( this.searchEmail.toLowerCase()))
+    } else {
+      this.filteredUsers = this.users;
+    }
+  }
 }
