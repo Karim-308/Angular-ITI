@@ -24,6 +24,7 @@ export class Users {
       phone: '01198765432',
       birthdate: '1998-07-22',
       role: 'user',
+ 
     },
     {
       id: 3,
@@ -32,6 +33,7 @@ export class Users {
       phone: '01234567890',
       birthdate: '1992-11-08',
       role: 'moderator',
+
     },
     {
       id: 4,
@@ -40,6 +42,7 @@ export class Users {
       phone: '01567890123',
       birthdate: '2000-01-30',
       role: 'user',
+  
     }
   ];
 }

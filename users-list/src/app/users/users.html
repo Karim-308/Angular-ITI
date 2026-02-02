@@ -4,7 +4,8 @@
     <div class="cards">
       @for (user of users; track user.id) {
         <div class="card">
-
+            <img [src]="'https://i.pravatar.cc/150?img=' + user.id" [alt]="user.username"  
+            class="avatar" />
           <span class="chip" [ngClass]="{
             'chip-admin': user.role === 'admin',     
             'chip-user': user.role === 'user',       
@@ -13,11 +14,12 @@
           }">
             {{ user.role }}
           </span>
-
+<div class="user-info">
           <p><strong>{{ user.username }}</strong></p>
-          <p>{{ user.email }}</p>
-          <p>{{ user.phone }}</p>
-          <p>{{ user.birthdate }}</p>
+            <p>{{ user.email }}</p>
+            <p>{{ user.phone }}</p>
+            <p>{{ user.birthdate }}</p>
+          </div>
         </div>
       }
     </div>

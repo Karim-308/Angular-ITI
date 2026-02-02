@@ -14,15 +14,20 @@
   .card {
     background: #f0f0f0;
     border-radius: 16px;
-    padding: 20px;
-    text-align: center;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #b0c4c4;
   }
 
   .avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    object-fit: cover;
+    border: 2px solid #b0c4c4;
+    background: white;
   }
 
   .chip {
@@ -44,6 +49,11 @@
 
   .chip-moderator {
     background-color: #f1c40f;
+  }
+
+  .user-info {
+    text-align: start;
+    margin-left: 20%;
   }
 
   .card p {
