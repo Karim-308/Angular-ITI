@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Users</h2>                                   
+  
+    <div class="cards">
+      @for (user of users; track user.id) {
+        <div class="card">
+
+          <span class="chip" [ngClass]="{
+            'chip-admin': user.role === 'admin',     
+            'chip-user': user.role === 'user',       
+            'chip-moderator': user.role ===
+  'moderator'
+          }">
+            {{ user.role }}
+          </span>
+
+          <p><strong>{{ user.username }}</strong></p>
+          <p>{{ user.email }}</p>
+          <p>{{ user.phone }}</p>
+          <p>{{ user.birthdate }}</p>
+        </div>
+      }
+    </div>
+  </div>

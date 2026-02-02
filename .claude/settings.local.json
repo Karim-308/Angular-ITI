@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(powershell.exe -Command \"Set-Location ''F:\\\\Projects\\\\Web Projects\\\\Angular-ITI\\\\first-angular-app''; ng generate component users --skip-tests\")",
+      "Bash(powershell.exe -Command \"Set-Location ''F:\\\\Projects\\\\Web Projects\\\\Angular-ITI\\\\first-angular-app''; node_modules/.bin/ng generate component users --skip-tests\")"
+    ]
+  }
+}
