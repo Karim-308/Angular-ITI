@@ -4,6 +4,6 @@
         <a routerLink="/" routerLinkActive="text-gray-900" [routerLinkActiveOptions]="{exact: true}" class="hover:text-gray-900 transition-colors">Products</a>
         <a routerLink="/register" routerLinkActive="text-gray-900" class="hover:text-gray-900 transition-colors">Register</a>
         <a routerLink="/login" routerLinkActive="text-gray-900" class="hover:text-gray-900 transition-colors">Login</a>
-        <a routerLink="/cart" routerLinkActive="text-gray-900" class="hover:text-gray-900 transition-colors">Cart</a>
+        <a routerLink="/cart" routerLinkActive="text-gray-900" class="hover:text-gray-900 transition-colors">Cart <span class="bg-white text-pink-400 rounded-full px-2 py-1 text-xs ml-1">{{ cartItemCount }}</span></a>
     </div>
 </nav>

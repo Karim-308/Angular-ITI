@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive} from '@angular/router';
+import { CartService } from '../services/cart';
 
 @Component({
   selector: 'app-navbar',
@@ -8,5 +9,13 @@ import { RouterLink, RouterLinkActive} from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+  cartData = inject(CartService);
 
+  cartItemCount = 0;
+
+  ngOnInit() {
+    this.cartData.data$.subscribe((data) => { 
+      this.cartItemCount = data.length;
+    });
+  }
 }

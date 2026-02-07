@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/productService';
+import { CartService } from '../services/cart';
 
 @Component({
   selector: 'app-product-detail',
@@ -19,19 +20,10 @@ export class ProductDetail {
     });
   }
 
-
-}
-
-
-/*
-
-  products: Product[] = [];
+   clientService = inject(CartService);
   
-  client = inject(ProductService);
-
-
- ngOnInit() { 
-   this.client.getProducts().subscribe((data) => {
-    this.products = (data as any).products;
-  });
-}*/
+   addToCart() {
+     this.clientService.addToCart(this.product);
+      console.log('Button clicked!');
+   }
+}

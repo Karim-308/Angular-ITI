@@ -1,1 +1,11 @@
-<p>product-detail works!</p>
+@if(product) {
+    <div class="p-8">
+        <img [src]="product.thumbnail" [alt]="product.title" class="w-full h-64 object-contain mb-4">
+        <h1 class="text-2xl font-bold mb-4">{{ product.title }}</h1>
+        <p class="text-gray-500 mb-4">{{ product.description }}</p>
+        <p class="text-xl font-semibold mb-4">{{ "$" + product.price }}</p>
+        <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" (click)="addToCart()">Add to Cart</button>
+    </div>
+} @else {    
+  <p>Loading product details...</p>
+    }
